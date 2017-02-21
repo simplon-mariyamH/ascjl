@@ -5,6 +5,7 @@
 	<title>Descriptif du Séjour</title>
 </head>
 <body>
+
 	<script type="text/javascript">
 		function checkAge() {
 		  var age = document.getElementById("age").value;
@@ -17,6 +18,7 @@
 	</script>
 
 	<?php include('menu.php'); ?>
+ 	
 	<div id='haut'></div>
 	<div id='bas'>
 		<h2>Réserver une place pour votre enfant</h2>
@@ -54,16 +56,17 @@
                     <span class="mdl-radio__label">masculin</span>
                 </label>
             </p>
-            <button class="mdl-button mdl-js-button mdl-button--accent" type="submit" name="submit" style="font-size: 2em;">Valider</button>
+            <button class="mdl-button mdl-js-button mdl-button--accent" type="submit" id="submit" name="submit" style="font-size: 2em;">Valider</button>
 		</form>
-		<?php 
+		<!-- <?php 
 		include('database.php');
 		function CptUser(){
    		global $bdd;
    		$compteur = $bdd->prepare('SELECT id FROM sejour');        
    		return $compteur->rowcount();
 		}
- 		?>
+ 		?> -->
+ 		
 	</div>
 </body>
 </html>
