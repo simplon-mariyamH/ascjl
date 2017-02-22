@@ -1,0 +1,80 @@
+.demo-card-wide.mdl-card {
+  width: 512px;
+}
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 176px;
+  background: url('bailieborough_juillet_2014_17.jpg') center / cover;
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+
+.sejour {
+	top: 100px;
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	padding: 15px;
+	position: relative;
+}
+
+#container {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+}
+
+.contenu {
+	top: -100px;
+	display: flex;
+	justify-content: space-around;
+	flex-direction: row;
+	position: relative;
+}
+
+.texte {
+	margin-right: 5%;
+	margin-left: 5%;
+}
+
+@media screen and (min-width: 1900px) 
+{
+    #container {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+}
+.contenu {
+	top: -100px;
+	display: flex;
+	justify-content: space-around;
+	flex-direction: row;
+	position: relative;
+}
+
+}
+
+@media screen and (max-width: 1100px)
+{
+    #container {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+}
+.contenu {
+	top: -100px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	position: relative;
+}
+
+h1 {
+	font-size: 1.3em;
+}
+
+p {
+	font-size: 1em;
+}
+}

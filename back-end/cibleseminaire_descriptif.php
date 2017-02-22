@@ -4,7 +4,7 @@ include('database.php');
 
 if ((isset($_POST['nom']) AND $_POST['nom']!=='') 
 	AND (isset($_POST['prenom']) AND $_POST['prenom']!=='') 
-	AND (isset($_POST['age']) AND $_POST['age']!=='' AND ($_POST['age']>=8 AND $_POST['age']<=16)) 
+	AND (isset($_POST['age']) AND $_POST['age']!=='' AND ($_POST['age']>=17)) 
 	AND (isset($_POST['sexe']) AND $_POST['sexe']!==''))
 {
 
@@ -21,11 +21,11 @@ $req -> execute(array(
 	$sexe
 	));
 
-$req = $bdd->query('UPDATE sejour SET nom=UPPER(nom), prenom = CONCAT(UCASE(LEFT(prenom, 1)), LCASE(SUBSTRING(prenom, 2)))');
+$req = $bdd->query('UPDATE seminaire SET nom=UPPER(nom), prenom = CONCAT(UCASE(LEFT(prenom, 1)), LCASE(SUBSTRING(prenom, 2)))');
 
-echo '<meta http-equiv="refresh" content="0;URL=sejour_confirmation.php">';
+echo '<meta http-equiv="refresh" content="0;URL=seminaire_confirmation.php">';
 
 } else {
-	echo 'Vous n\'avez pas renseigner tous les champs ou avez entrez un âge incorrect, veuillez réessayez en cliquant <a href="sejour_descriptif.php">ici</a>';
+	echo 'Vous n\'avez pas renseigner tous les champs ou avez entrez un âge incorrect, veuillez réessayez en cliquant <a href="seminaire_descriptif.php">ici</a>';
 }
  ?>

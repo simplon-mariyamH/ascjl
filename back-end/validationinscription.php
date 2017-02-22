@@ -1,16 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<?php include('header.php');
+	<?php include('head.php');
 	?>
 	<title>Validation</title>
 </head>
 <body>
-
-	<?php include("menus.php"); ?>
-        <main class="mdl-layout__content">
-            <div class="page-content">
-            <!-- Your content goes here -->
+<?php include('menu.php'); ?>
             <?php
 				include('database.php');
 				
@@ -29,9 +25,7 @@
 
 				$affichage -> closeCursor();
 			?>
-            </div>
-
-        </main>
+            <?php include('fin_menu.php'); ?>
 </body>
 </html>
 <!-- <?php 

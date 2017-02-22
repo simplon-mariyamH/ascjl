@@ -31,6 +31,8 @@ $req -> execute(array(
 	$adresse
 	));
 
+$req = $bdd->query('UPDATE inscription SET nom=UPPER(nom), prenom = CONCAT(UCASE(LEFT(prenom, 1)), LCASE(SUBSTRING(prenom, 2)))');
+
 include("mail.php");
 //=====Envoi de l'e-mail.
 mail($mails,$sujet,$message,$header);

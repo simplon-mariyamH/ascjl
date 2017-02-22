@@ -1,0 +1,49 @@
+#fond {
+	background: url('0001429_900.jpg') no-repeat center / cover;
+	background-size: 90% 100%;  
+	background-position: fixed;
+	height: 200px;
+	background-color: grey;
+}
+
+#logo {
+	background: url("1459255_602478053122155_694679201_n.png") no-repeat;
+	background-position: fixed;
+	background-size: 100% 100%;
+	height:45%;
+	width: 15%; 
+}
+
+#on_connexion {
+	z-index: 10;
+	border: 1px solid black;
+	background-color: grey;
+	width: 200px;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	align-items: center;
+    position: relative;
+}
+.element {
+	padding: 10px;
+}
+
+#under_connexion {
+    display: flex;
+    position: relative;
+    top: 16px;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#under_connexion p {
+    padding-top: -15px;
+    padding-bottom: -15px; 
+}
+
+#en_connexion {
+	display: block;
+}
+

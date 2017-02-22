@@ -9,10 +9,10 @@
 	<script type="text/javascript">
 		function checkAge() {
 		  var age = document.getElementById("age").value;
-		  if (age<8 || age>16) {
-		    var msg = document.createTextNode("Insérez un âge entre 8 et 16 ans inclus.");
+		  if (age<17) {
+		    var msg = document.createTextNode("Insérez un âge supérieur ou égale à 17 ans.");
 		    document.getElementById("ageerror").appendChild(msg);
-		    alert('L\'enfant doit être âgé entre 8 et 16 ans pour participer au séjour.' );
+		    alert('Vous devez avoir 17 ans ou plus pour participer au séminaire.' );
 		  }
 		}
 	</script>
@@ -21,8 +21,8 @@
  	
 	<div id='haut'></div>
 	<div id='bas'>
-		<h2>Réserver une place pour votre enfant</h2>
-		<form method="post" action="ciblesejour_descriptif.php">
+		<h2>Réserver une place pour le séminaire</h2>
+		<form method="post" action="cibleseminaire_descriptif.php">
 			
 			<p>
             	<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
