@@ -21,6 +21,7 @@
  	
 	<div id='haut'></div>
 	<div id='bas'>
+        <h3>Il reste : <?php ?>  </h3>
 		<h2>Réserver une place pour le séminaire</h2>
 		<form method="post" action="cibleseminaire_descriptif.php">
 			
