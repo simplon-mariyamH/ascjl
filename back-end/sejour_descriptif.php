@@ -19,7 +19,20 @@
 
 	<?php include('menu.php'); ?>
  	
-	<div id='haut'></div>
+	<div id='haut'>
+			<?php 
+			include('database.php');
+			$nombre_initial = 30;
+
+			$affichage = $bdd -> query('SELECT COUNT(*) AS nbinscrit FROM sejour');
+
+			$donnees = $affichage -> fetch();
+			$nombre_final = $nombre_initial - $donnees['nbinscrit'];
+			
+			if ($nombre_final !== 0) {
+				echo 'Il reste : '.$nombre_final.' places.';
+			?>
+			</div>
 	<div id='bas'>
 		<h2>Réserver une place pour votre enfant</h2>
 		<form method="post" action="ciblesejour_descriptif.php">
@@ -68,6 +81,14 @@
  		?> -->
  		
 	</div>
+			<?php
+			}
+			else {
+				echo "<h1>IL N'Y A PLUS DE PLACE <br/> SUIVEZ-NOUS POUR NOS PROCHAINS EVENEMENT
+				<br/>LES INFOS SERONT <a href='sejour.php'>ICI</a> UNE FOIS DISPONIBLE</h1>";
+			}
+			 ?>
+	
     <?php include('fin_menu.php'); ?>
 </body>
 </html>

@@ -68,6 +68,19 @@ INSERT INTO `sejour` (`id`, `nom`, `prenom`, `age`, `sexe`) VALUES
 (16, 'BOB', 'L\'éponge', 12, 'feminin'),
 (17, 'A', 'A', 12, 'masculin');
 
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `seminaire`
+--
+
+CREATE TABLE `seminaire` (
+  `id` int(11) NOT NULL,
+  `nom` varchar(255) NOT NULL,
+  `prenom` varchar(255) NOT NULL,
+  `age` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 --
 -- Index pour les tables exportées
 --
@@ -85,6 +98,12 @@ ALTER TABLE `sejour`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Index pour la table `seminaire`
+--
+ALTER TABLE `seminaire`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT pour les tables exportées
 --
 
@@ -98,3 +117,8 @@ ALTER TABLE `inscription`
 --
 ALTER TABLE `sejour`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+--
+-- AUTO_INCREMENT pour la table `seminaire`
+--
+ALTER TABLE `seminaire`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;

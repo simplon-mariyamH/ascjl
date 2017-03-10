@@ -13,7 +13,7 @@ $prenom = $_POST['prenom'];
 $age = $_POST['age'];
 $sexe = $_POST['sexe'];
 
-$req = $bdd->prepare('INSERT INTO sejour(nom, prenom, age, sexe) VALUES(?, ?, ?, ?)');
+$req = $bdd->prepare('INSERT INTO seminaire(nom, prenom, age, sexe) VALUES(?, ?, ?, ?)');
 $req -> execute(array( 
 	$nom, 
 	$prenom, 

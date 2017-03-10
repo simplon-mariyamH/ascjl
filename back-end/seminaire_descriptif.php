@@ -19,9 +19,23 @@
 
 	<?php include('menu.php'); ?>
  	
-	<div id='haut'></div>
+	<div id='haut'>
+		<h3>Il reste : 
+			<?php 
+			include('database.php');
+			$nombre_initial = 30;
+			
+
+			$affichage = $bdd -> query('SELECT COUNT(*) AS nbinscrit FROM seminaire');
+
+			$donnees = $affichage -> fetch();
+			$nombre_final = $nombre_initial - $donnees['nbinscrit'];
+
+			if ($nombre_final !== 0) {
+				echo 'Il reste : '.$nombre_final.' places.';
+			?>
+	</div>
 	<div id='bas'>
-        <h3>Il reste : <?php ?>  </h3>
 		<h2>Réserver une place pour le séminaire</h2>
 		<form method="post" action="cibleseminaire_descriptif.php">
 			
@@ -59,16 +73,14 @@
             </p>
             <button class="mdl-button mdl-js-button mdl-button--accent" type="submit" id="submit" name="submit" style="font-size: 2em;">Valider</button>
 		</form>
-		<!-- <?php 
-		include('database.php');
-		function CptUser(){
-   		global $bdd;
-   		$compteur = $bdd->prepare('SELECT id FROM sejour');        
-   		return $compteur->rowcount();
-		}
- 		?> -->
- 		
 	</div>
+			<?php
+			}
+			else {
+				echo "<h1>IL N'Y A PLUS DE PLACE <br/> SUIVEZ-NOUS POUR NOS PROCHAINS EVENEMENT
+				<br/>LES INFOS SERONT <a href='seminaire.php'>ICI</a> UNE FOIS DISPONIBLE</h1>";
+			}
+			 ?>
     <?php include('fin_menu.php'); ?>
 </body>
 </html>
